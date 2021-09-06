@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="dao" class="beanexp.deviceDao">
+		<property name="a" value="3"></property>		
+	</bean>
+	
+	<bean id="service" class="beanexp.deviceService">
+		<property name="se" value="2"></property>
+		<property name="dao" ref="dao"></property>
+	</bean>
+	
+	<bean id="web" class="beanexp.deviceWeb">
+		<property name="we" value="1"></property>
+		<property name="service" ref="service"></property>
+	</bean>
+	
+	
+	
+
+</beans>
